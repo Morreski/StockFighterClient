@@ -1,0 +1,5 @@
+# Authentication: Your API Key
+API_KEY = ""
+
+#API URL with no trailing '/'
+API_URL = "https://api.stockfighter.io/ob/api"
