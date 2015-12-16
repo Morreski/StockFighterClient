@@ -1,6 +1,7 @@
 from enum import Enum
 from urllib import request
 from core.errors import TradeException
+import urllib
 import conf
 import json
 
@@ -80,7 +81,7 @@ class TradeMaker(object):
             "X-Starfighter-Authorization": conf.API_KEY
         }
 
-        url = "%s%s" % (conf.API_URL, endpoint)
+        url = urllib.parse.urljoin(conf.API_URL, endpoint)
 
         payload = json.dumps(data).encode("utf-8") if data else None
 
